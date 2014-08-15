@@ -1,0 +1,8 @@
+org\gbif\biovel\locality\ws\LocalityResource.class
+org\gbif\biovel\locality\model\LocationList.class
+org\gbif\biovel\locality\guice\Trim.class
+org\gbif\biovel\locality\guice\LocalityMyBatisModule$InternalLocationServiceMyBatisModule.class
+org\gbif\biovel\locality\guice\LocalityMyBatisModule.class
+org\gbif\biovel\locality\guice\LocalityWsServletListener.class
+org\gbif\biovel\locality\model\Location.class
+org\gbif\biovel\locality\persistence\LocationMapper.class

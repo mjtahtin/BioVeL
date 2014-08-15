@@ -1,0 +1,24 @@
+INFO  [2014-06-07 09:23:34,381+0300] [main] org.gbif.biovel.locality.database.LiquibaseInitializer: Running Liquibase
+INFO  [2014-06-07 09:23:37,791+0300] [main] org.gbif.biovel.locality.database.LiquibaseInitializer: Liquibase finished successfully
+INFO  [2014-06-07 09:24:04,064+0300] [main] org.gbif.mybatis.guice.MyBatisModule: Configuring MyBatis with no cache
+WARN  [2014-06-07 09:36:43,494+0300] [qtp1180097594-55] com.jolbox.bonecp.BoneCPConfig: Max Connections < 1. Setting to 20
+DEBUG [2014-06-07 09:36:43,891+0300] [qtp1180097594-55] org.gbif.biovel.locality.persistence.LocationMapper.listLocations: ooo Using Connection [com.jolbox.bonecp.ConnectionHandle@4abd80f8]
+DEBUG [2014-06-07 09:36:43,897+0300] [qtp1180097594-55] org.gbif.biovel.locality.persistence.LocationMapper.listLocations: ==>  Preparing: SELECT DISTINCT recordedBy, continent, locality, country, county, stateProvince, decimalLatitude, decimalLongitude, day, month, year FROM location WHERE recordedBy LIKE ? ORDER BY locality 
+DEBUG [2014-06-07 09:36:43,935+0300] [qtp1180097594-55] org.gbif.biovel.locality.persistence.LocationMapper.listLocations: ==> Parameters: Saarenmaa%(String)
+DEBUG [2014-06-07 09:36:44,774+0300] [qtp1180097594-55] org.gbif.biovel.locality.persistence.LocationMapper.listLocations: <==      Total: 43
+DEBUG [2014-06-07 09:39:47,528+0300] [qtp1180097594-58] org.gbif.biovel.locality.persistence.LocationMapper.listLocations: ooo Using Connection [com.jolbox.bonecp.ConnectionHandle@3bcc4e2e]
+DEBUG [2014-06-07 09:39:47,531+0300] [qtp1180097594-58] org.gbif.biovel.locality.persistence.LocationMapper.listLocations: ==>  Preparing: SELECT DISTINCT recordedBy, continent, locality, country, county, stateProvince, decimalLatitude, decimalLongitude, day, month, year FROM location WHERE recordedBy LIKE ? ORDER BY locality 
+DEBUG [2014-06-07 09:39:47,534+0300] [qtp1180097594-58] org.gbif.biovel.locality.persistence.LocationMapper.listLocations: ==> Parameters: Saarenmaa%(String)
+DEBUG [2014-06-07 09:39:47,562+0300] [qtp1180097594-58] org.gbif.biovel.locality.persistence.LocationMapper.listLocations: <==      Total: 43
+DEBUG [2014-06-07 09:45:35,380+0300] [qtp1180097594-58] org.gbif.biovel.locality.persistence.LocationMapper.listLocations: ooo Using Connection [com.jolbox.bonecp.ConnectionHandle@30cadc2d]
+DEBUG [2014-06-07 09:45:35,381+0300] [qtp1180097594-58] org.gbif.biovel.locality.persistence.LocationMapper.listLocations: ==>  Preparing: SELECT DISTINCT recordedBy, continent, locality, country, county, stateProvince, decimalLatitude, decimalLongitude, day, month, year FROM location WHERE recordedBy LIKE ? ORDER BY locality 
+DEBUG [2014-06-07 09:45:35,382+0300] [qtp1180097594-58] org.gbif.biovel.locality.persistence.LocationMapper.listLocations: ==> Parameters: Saarenmaa%(String)
+DEBUG [2014-06-07 09:45:35,408+0300] [qtp1180097594-58] org.gbif.biovel.locality.persistence.LocationMapper.listLocations: <==      Total: 43
+DEBUG [2014-06-07 09:46:19,981+0300] [qtp1180097594-60] org.gbif.biovel.locality.persistence.LocationMapper.listLocations: ooo Using Connection [com.jolbox.bonecp.ConnectionHandle@4c7d137b]
+DEBUG [2014-06-07 09:46:19,982+0300] [qtp1180097594-60] org.gbif.biovel.locality.persistence.LocationMapper.listLocations: ==>  Preparing: SELECT DISTINCT recordedBy, continent, locality, country, county, stateProvince, decimalLatitude, decimalLongitude, day, month, year FROM location WHERE recordedBy LIKE ? ORDER BY locality 
+DEBUG [2014-06-07 09:46:19,983+0300] [qtp1180097594-60] org.gbif.biovel.locality.persistence.LocationMapper.listLocations: ==> Parameters: Saarenmaa%(String)
+DEBUG [2014-06-07 09:46:20,008+0300] [qtp1180097594-60] org.gbif.biovel.locality.persistence.LocationMapper.listLocations: <==      Total: 43
+DEBUG [2014-06-07 09:47:16,610+0300] [qtp1180097594-60] org.gbif.biovel.locality.persistence.LocationMapper.listLocations: ooo Using Connection [com.jolbox.bonecp.ConnectionHandle@6ed336ae]
+DEBUG [2014-06-07 09:47:16,610+0300] [qtp1180097594-60] org.gbif.biovel.locality.persistence.LocationMapper.listLocations: ==>  Preparing: SELECT DISTINCT recordedBy, continent, locality, country, county, stateProvince, decimalLatitude, decimalLongitude, day, month, year FROM location WHERE recordedBy LIKE ? ORDER BY locality 
+DEBUG [2014-06-07 09:47:16,612+0300] [qtp1180097594-60] org.gbif.biovel.locality.persistence.LocationMapper.listLocations: ==> Parameters: Saarenmaa%(String)
+DEBUG [2014-06-07 09:47:16,641+0300] [qtp1180097594-60] org.gbif.biovel.locality.persistence.LocationMapper.listLocations: <==      Total: 43

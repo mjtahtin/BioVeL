@@ -1,0 +1,26 @@
+<databaseChangeLog
+  xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd">
+  
+  <changeSet id="1" author="marko">
+    <sqlFile path="liquibase/schema.sql"/>
+    
+    <addColumn tableName="location">
+            <column name="guid" type="varchar(256)"/>   
+    </addColumn>
+    <addColumn tableName="location">
+            <column name="county" type="varchar(256)"/>   
+    </addColumn>
+    <addColumn tableName="location">
+            <column name="state_province" type="varchar(256)"/>   
+    </addColumn>
+    <addColumn tableName="location">
+            <column name="latitude" type="varchar(256)"/>   
+    </addColumn>
+    <addColumn tableName="location">
+            <column name="longitude" type="varchar(256)"/>   
+    </addColumn>
+     
+  </changeSet>
+</databaseChangeLog>

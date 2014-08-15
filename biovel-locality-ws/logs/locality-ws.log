@@ -1,0 +1,5 @@
+INFO  [2014-06-27 14:13:15,514+0300] [main] org.gbif.biovel.locality.database.LiquibaseInitializer: Running Liquibase
+INFO  [2014-06-27 14:18:53,483+0300] [main] org.gbif.biovel.locality.database.LiquibaseInitializer: Running Liquibase
+INFO  [2014-06-27 14:22:04,859+0300] [main] org.gbif.biovel.locality.database.LiquibaseInitializer: Running Liquibase
+INFO  [2014-06-27 14:22:10,944+0300] [main] org.gbif.biovel.locality.database.LiquibaseInitializer: Liquibase finished successfully
+INFO  [2014-06-27 14:22:54,568+0300] [main] org.gbif.mybatis.guice.MyBatisModule: Configuring MyBatis with no cache

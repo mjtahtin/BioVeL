@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.gbif.biovel.locality.persistence.LocationMapper">
+  <resultMap id="LOCATION_MAP" type="Location" autoMapping="true"></resultMap>
+  
+  
+  <sql id="WRITABLE_LOCATION_FIELDS">
+    occurrenceID, continent,locality,recordedBy,country, county, stateProvince, decimalLatitude, decimalLongitude, year, month, day
+  </sql>
+  
+  
+  <update id="updateLocation">
+    UPDATE location set
+    locality = #{locality,jdbcType=VARCHAR},
+    country = #{country,jdbcType=VARCHAR} ,
+    recordedBy = #{recordedBy,jdbcType=VARCHAR}   
+    where occurrenceID = #{occurrenceID,jdbcType=VARCHAR} 
+  </update>
+  
+   <sql id="WRITABLE_LOCATION_FIELD_TYPES">
+    #{occurrenceID, jdbcType=VARCHAR},
+    #{continent, jdbcType=VARCHAR},
+    #{locality, jdbcType=VARCHAR},
+    #{recordedBy, jdbcType=VARCHAR},
+    #{country, jdbcType=VARCHAR},
+    #{county, jdbcType=VARCHAR},
+    #{stateProvince, jdbcType=VARCHAR},
+    #{decimalLatitude, jdbcType=VARCHAR},
+    #{decimalLongitude, jdbcType=VARCHAR},
+    #{year, jdbcType=INTEGER},
+    #{month, jdbcType=INTEGER},
+    #{day, jdbcType=INTEGER}      
+  </sql>
+  
+   <sql id="SIMPLE_SEARCH_COUNTRY">  
+    AND 
+     country LIKE #{country,jdbcType=VARCHAR}
+  </sql>
+  
+  <sql id="SIMPLE_SEARCH_COUNTY">  
+    AND 
+     county LIKE #{county,jdbcType=VARCHAR}
+  </sql>
+  
+  <sql id="SIMPLE_SEARCH_STATE_PROVINCE">  
+    AND 
+     stateProvince LIKE #{stateProvince,jdbcType=VARCHAR}
+  </sql>
+  
+  <sql id="SIMPLE_SEARCH_CONTINENT">  
+    AND 
+     continent LIKE #{continent,jdbcType=VARCHAR}
+  </sql>
+  
+  <sql id="SIMPLE_SEARCH_LOCALITY">  
+    AND 
+     locality LIKE #{locality,jdbcType=VARCHAR}
+  </sql>
+  
+  <sql id="SIMPLE_SEARCH_OCCURRENCE_ID">  
+    AND 
+     occurrenceID = #{occurrenceID,jdbcType=VARCHAR}
+  </sql>
+  
+  <sql id="SIMPLE_SEARCH_DECIMAL_LATITUDE">  
+    AND 
+     decimalLatitude LIKE #{decimalLatitude,jdbcType=VARCHAR}
+  </sql>
+  
+  <sql id="SIMPLE_SEARCH_DECIMAL_LONGITUDE">  
+    AND 
+     decimalLongitude LIKE #{decimalLongitude,jdbcType=VARCHAR}
+  </sql>
+  
+  <sql id="SIMPLE_SEARCH_YEAR">  
+    AND 
+     year = #{year,jdbcType=INTEGER}
+  </sql>
+  
+  <sql id="SIMPLE_SEARCH_MONTH">  
+    AND 
+     month = #{month,jdbcType=INTEGER}
+  </sql>
+  
+  <sql id="SIMPLE_SEARCH_DAY">  
+    AND 
+     day = #{day,jdbcType=INTEGER}
+  </sql>
+  
+
+ 
+ 
+ <!--
+    Lists locations for the given collector 
+  -->
+  <select id="listLocations" resultMap="LOCATION_MAP">
+    SELECT DISTINCT recordedBy, continent, locality, country, county, stateProvince, decimalLatitude, decimalLongitude, day, month, year
+    FROM location
+    WHERE recordedBy LIKE #{recordedBy,jdbcType=VARCHAR} 
+    <if test="continent != null" >
+      <include refid="SIMPLE_SEARCH_CONTINENT"/>
+    </if> 
+    <if test="country != null" >
+      <include refid="SIMPLE_SEARCH_COUNTRY"/>
+    </if>  
+    <if test="county != null" >
+      <include refid="SIMPLE_SEARCH_COUNTY"/>
+    </if> 
+    <if test="stateProvince != null" >
+      <include refid="SIMPLE_SEARCH_STATE_PROVINCE"/>
+    </if> 
+    <if test="locality != null" >
+      <include refid="SIMPLE_SEARCH_LOCALITY"/>
+    </if>    
+    <if test="decimalLongitude != null" >
+      <include refid="SIMPLE_SEARCH_DECIMAL_LONGITUDE"/>
+    </if> 
+    <if test="decimalLatitude != null" >
+      <include refid="SIMPLE_SEARCH_DECIMAL_LATITUDE"/>
+    </if> 
+    <if test="year != 0" >
+      <include refid="SIMPLE_SEARCH_YEAR"/>
+    </if> 
+    <if test="month != 0" >
+      <include refid="SIMPLE_SEARCH_MONTH"/>
+    </if> 
+    <if test="day != 0" >
+      <include refid="SIMPLE_SEARCH_DAY"/>
+    </if> 
+     ORDER BY locality     
+  </select>  
+    
+   <insert id="createLocation" parameterType="Location" useGeneratedKeys="true" keyProperty="key">
+    INSERT INTO location(<include refid="WRITABLE_LOCATION_FIELDS"/>)
+    VALUES(<include refid="WRITABLE_LOCATION_FIELD_TYPES"/>)
+  </insert>
+  
+  <delete id="deleteLocation">
+    DELETE FROM location
+    where occurrenceID = #{occurrenceID,jdbcType=VARCHAR} 
+  </delete>
+  
+  
+</mapper>

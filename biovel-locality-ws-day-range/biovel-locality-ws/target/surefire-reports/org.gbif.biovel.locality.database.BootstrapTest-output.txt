@@ -1,0 +1,9 @@
+INFO  [2014-06-07 09:23:34,381+0300] [main] org.gbif.biovel.locality.database.LiquibaseInitializer: Running Liquibase
+INFO 7.6.2014 9:23:liquibase: Successfully released change log lock
+INFO 7.6.2014 9:23:liquibase: Successfully acquired change log lock
+INFO 7.6.2014 9:23:liquibase: liquibase/master.xml is using schema version 2.0 rather than version 3.0
+INFO 7.6.2014 9:23:liquibase: liquibase/001-initial.xml is using schema version 2.0 rather than version 3.0
+INFO 7.6.2014 9:23:liquibase: Reading from test.DATABASECHANGELOG
+INFO 7.6.2014 9:23:liquibase: Reading from test.DATABASECHANGELOG
+INFO 7.6.2014 9:23:liquibase: Successfully released change log lock
+INFO  [2014-06-07 09:23:37,791+0300] [main] org.gbif.biovel.locality.database.LiquibaseInitializer: Liquibase finished successfully

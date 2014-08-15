@@ -1,0 +1,5 @@
+org\gbif\biovel\locality\database\LiquibaseInitializer.class
+org\gbif\biovel\locality\guice\LocalityTestModules$ManagementProvider.class
+org\gbif\biovel\locality\guice\LocalityTestModules.class
+org\gbif\biovel\locality\database\BootstrapTest.class
+org\gbif\biovel\locality\guice\LocalityTestModules$1.class
