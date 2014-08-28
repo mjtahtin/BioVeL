@@ -50,9 +50,9 @@ public class LocalityTestModules {
     private final String password;
 
     @Inject
-    public ManagementProvider(@Named("uio_assistant.db.JDBC.driver") String driver,
-      @Named("uio_assistant.db.JDBC.url") String url, @Named("uio_assistant.db.JDBC.username") String username,
-      @Named("uio_assistant.db.JDBC.password") String password) { 
+    public ManagementProvider(@Named("locality.db.JDBC.driver") String driver,
+      @Named("locality.db.JDBC.url") String url, @Named("locality.db.JDBC.username") String username,
+      @Named("locality.db.JDBC.password") String password) { 
       this.url = url;
       this.username = username;
       this.password = password;

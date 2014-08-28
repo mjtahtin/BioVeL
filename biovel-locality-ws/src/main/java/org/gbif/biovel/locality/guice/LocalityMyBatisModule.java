@@ -55,7 +55,7 @@ public class LocalityMyBatisModule extends PrivateServiceModule {
     }
   }
 
-  private static final String PREFIX = "uio_assistant.db.";
+  private static final String PREFIX = "locality.db.";
 
   public LocalityMyBatisModule(Properties properties) {
     super(PREFIX, properties);
